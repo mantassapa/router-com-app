@@ -1,13 +1,13 @@
 import React from 'react' 
-import { zitosVeikla } from '../../data/data'
+// import { zitosVeikla } from '../../data/data'
 import { Link, Routes, NavLink, useParams } from 'react-router-dom'
 
-const Zita = () => {
+const Zita = ({zitosVeikla}) => {
   const { id } = useParams()
   console.log(id);
   
   const findUser = zitosVeikla.find((u)=>u.id===parseInt(id))
-  console.log(findUser.img);
+  // console.log(findUser);
 
   return (
     <div>
